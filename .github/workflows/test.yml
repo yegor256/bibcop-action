@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          echo "@misc{x, title={Hello, world!}, author={Bugayenko, Yegor}, year={2024}}" > test.bib
+          echo "@misc{x, title={{Hello, World!}}, author={Bugayenko, Yegor}, year={2024}}" > test.bib
       - uses: ./
         with:
           opts: --verbose
