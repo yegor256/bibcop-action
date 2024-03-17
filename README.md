@@ -10,6 +10,7 @@ using [bibcop](https://github.com/yegor256/bibcop).
 name: bibcop
 on:
   push:
+  pull_request:
 jobs:
   bibcop:
     runs-on: ubuntu-22.04
