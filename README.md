@@ -3,7 +3,7 @@
 [![test](https://github.com/yegor256/bibcop-action/actions/workflows/test.yml/badge.svg)](https://github.com/yegor256/bibcop-action/actions/workflows/test.yml)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/bibcop-action/blob/master/LICENSE.txt)
 
-Checks the quality of all `.bib` files in the repository,
+Checks the quality of all BibTeX `.bib` files in the repository,
 using [bibcop](https://github.com/yegor256/bibcop).
 
 ```yaml
