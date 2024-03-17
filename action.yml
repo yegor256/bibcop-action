@@ -30,6 +30,6 @@ runs:
   image: Dockerfile
 inputs:
   opts:
-    description: 'Command-line options for bibcop'
+    description: 'Command-line options for the bibcop tool'
     required: false
     default: ''
