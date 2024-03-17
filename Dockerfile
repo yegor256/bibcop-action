@@ -20,12 +20,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM yegor256/rultor-image:1.23.1
+FROM ubuntu:22.04
 
 LABEL "repository"="https://github.com/yegor256/bibcop-action"
 LABEL "maintainer"="Yegor Bugayenko"
 
-RUN wget https://yegor256.github.io/bibcop/bibcop.pl /home/bibcop.pl
+RUN apt-get -y update
+RUN apt-get -y install wget
+
+RUN wget https://yegor256.github.io/bibcop/bibcop.pl \
+  && mv bibcop.pl /usr/bin \
+  && chmod a+x /usr/bin/bibcop.pl
 
 WORKDIR /home
 COPY entry.sh /home

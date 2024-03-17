@@ -29,5 +29,4 @@ cd "${GITHUB_WORKSPACE-/w}"
 
 read -r -a opts <<< "${INPUT_OPTS}"
 
-chmod a+x /home/bibcop.pl
-find . -name '.bib' -exec /home/bibcop.pl "${opts[@]}" {} \;
+find . -name '.bib' -exec bibcop.pl "${opts[@]}" {} \;
