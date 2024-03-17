@@ -29,4 +29,8 @@ cd "${GITHUB_WORKSPACE-/w}"
 
 read -r -a opts <<< "${INPUT_OPTS}"
 
-find . -name '*.bib' -exec bibcop.pl "${opts[@]}" {} \;
+bibs=$(find . -name '*.bib')
+
+echo "${bibs}" | while IFS= read -r bib; do
+    bibcop.pl "${opts[@]}" "${bib}"
+done
