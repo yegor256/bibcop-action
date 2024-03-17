@@ -29,4 +29,4 @@ cd "${GITHUB_WORKSPACE-/w}"
 
 read -r -a opts <<< "${INPUT_OPTS}"
 
-find . -name '.bib' -exec bibcop.pl "${opts[@]}" {} \;
+find . -name '*.bib' -exec bibcop.pl "${opts[@]}" {} \;
