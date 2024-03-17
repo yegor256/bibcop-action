@@ -31,6 +31,11 @@ read -r -a opts <<< "${INPUT_OPTS}"
 
 bibs=$(find . -name '*.bib')
 
+if [ -z "${bibs}" ]; then
+    echo "There are no .bib files in the repository"
+    exit
+fi
+
 echo "${bibs}" | while IFS= read -r bib; do
     bibcop.pl "${opts[@]}" "${bib}"
 done
