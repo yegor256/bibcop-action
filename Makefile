@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+.PHONY: all test clean
+
 test:
 	docker run --rm -v "$$(pwd):/w" $$(docker build -q .)
 
