@@ -1,5 +1,6 @@
+---
 name: test
-on:
+'on':
   push:
   pull_request:
 jobs:
@@ -8,7 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          echo "@misc{x, title={{Hello, World!}}, author={Bugayenko, Yegor}, year={2024}}" > test.bib
+          cat >test.bib <EOT
+          @misc{x,
+            title={{Hello, World!}},
+            author={Bugayenko, Yegor},
+            year={2024}
+          }
+          EOT
       - uses: ./
         with:
           opts: --verbose
