@@ -1,6 +1,6 @@
 ---
 name: yamllint
-on:
+'on':
   push:
     branches:
       - master
