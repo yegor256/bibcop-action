@@ -25,10 +25,10 @@ FROM ubuntu:22.04
 LABEL "repository"="https://github.com/yegor256/bibcop-action"
 LABEL "maintainer"="Yegor Bugayenko"
 
-RUN apt-get -y update
-RUN apt-get -y install wget
+RUN apt-get -y update \
+  && apt-get -y --no-install-recommends install wget=1.21.2-2ubuntu1
 
-RUN wget https://yegor256.github.io/bibcop/bibcop.pl \
+RUN wget --quiet https://yegor256.github.io/bibcop/bibcop.pl \
   && mv bibcop.pl /usr/bin \
   && chmod a+x /usr/bin/bibcop.pl
 
