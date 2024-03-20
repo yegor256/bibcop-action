@@ -27,7 +27,6 @@ LABEL "maintainer"="Yegor Bugayenko"
 
 RUN apt-get -y update \
   && apt-get -y --no-install-recommends install wget=1.21.2-2ubuntu1 \
-  && wget --quiet --version \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
