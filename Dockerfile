@@ -26,7 +26,9 @@ LABEL "repository"="https://github.com/yegor256/bibcop-action"
 LABEL "maintainer"="Yegor Bugayenko"
 
 RUN apt-get -y update \
-  && apt-get -y --no-install-recommends install wget=1.21.2-2ubuntu1
+  && apt-get -y --no-install-recommends install wget=1.21.2-2ubuntu1 \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 RUN wget --quiet https://yegor256.github.io/bibcop/bibcop.pl \
   && mv bibcop.pl /usr/bin \
