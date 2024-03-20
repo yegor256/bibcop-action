@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          cat >test.bib <EOT
+          cat > test.bib << EOT
           @misc{x,
             title={{Hello, World!}},
             author={Bugayenko, Yegor},
