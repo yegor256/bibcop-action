@@ -31,7 +31,7 @@ RUN apt-get -y update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget --quiet https://yegor256.github.io/bibcop/bibcop.pl \
+RUN wget --quiet --no-check-certificate https://yegor256.github.io/bibcop/bibcop.pl \
   && mv bibcop.pl /usr/bin \
   && chmod a+x /usr/bin/bibcop.pl
 
