@@ -36,7 +36,7 @@ if [ -z "${bibs}" ]; then
     exit
 fi
 
-echo "Version 0.0.0"
+echo "Version 0.0.2"
 
 echo "${bibs}" | while IFS= read -r bib; do
     bibcop.pl "${opts[@]}" "${bib}"

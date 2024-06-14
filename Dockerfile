@@ -24,7 +24,7 @@ FROM ubuntu:22.04
 
 LABEL "repository"="https://github.com/yegor256/bibcop-action"
 LABEL "maintainer"="Yegor Bugayenko"
-LABEL "version"="0.0.0"
+LABEL "version"="0.0.2"
 
 RUN apt-get -y update \
   && apt-get -y --no-install-recommends install wget=1.21.2-2ubuntu1 \
