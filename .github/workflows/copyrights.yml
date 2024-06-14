@@ -20,13 +20,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: hadolint
+name: copyrights
 'on':
   push:
   pull_request:
 jobs:
-  hadolint:
+  copyrights:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@master
-      - uses: hadolint/hadolint-action@v3.1.0
+      - uses: actions/checkout@v4
+      - uses: yegor256/copyrights-action@0.0.4
