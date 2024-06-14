@@ -27,7 +27,7 @@ branding:
   color: orange
 runs:
   using: 'docker'
-  image: Dockerfile
+  image: 'docker://yegor256/bibcop-action:latest'
 inputs:
   opts:
     description: 'Command-line options for the bibcop tool'
