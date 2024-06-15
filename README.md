@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
-      - uses: yegor256/bibcop-action@0.0.2
+      - uses: yegor256/bibcop-action@0.0.3
 ```
 
 ## How to Contribute
