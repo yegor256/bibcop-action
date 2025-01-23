@@ -8,7 +8,7 @@ using [bibcop](https://github.com/yegor256/bibcop).
 
 ```yaml
 name: bibcop
-on:
+'on':
   push:
   pull_request:
 jobs:
