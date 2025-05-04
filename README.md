@@ -24,7 +24,7 @@ jobs:
 
 ## How to Contribute
 
-In order to test this action, install [GNU make] just run:
+In order to test this action, install [GNU make] and just run:
 
 ```bash
 make
