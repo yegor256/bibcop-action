@@ -8,7 +8,7 @@ LABEL "maintainer"="Yegor Bugayenko"
 LABEL "version"="0.0.0"
 
 RUN apt-get -y update \
-  && apt-get -y --no-install-recommends install wget=1.21.2-2ubuntu1 \
+  && apt-get -y --no-install-recommends install wget=* \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 

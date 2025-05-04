@@ -1,10 +1,9 @@
 #!/bin/bash
+
 # SPDX-FileCopyrightText: Copyright (c) 2024 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-set -x
-set -e
-set -o pipefail
+set -ex -o pipefail
 
 cd "${GITHUB_WORKSPACE-/w}"
 
