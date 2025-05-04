@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@master
-      - uses: yegor256/bibcop-action@0.0.3
+      - uses: yegor256/bibcop-action@0.0.4
 ```
 
 ## How to Contribute
