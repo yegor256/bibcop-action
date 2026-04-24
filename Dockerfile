@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2024 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 LABEL "repository"="https://github.com/yegor256/bibcop-action"
 LABEL "maintainer"="Yegor Bugayenko"
