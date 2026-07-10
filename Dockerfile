@@ -12,7 +12,8 @@ RUN apt-get -y update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget --quiet --no-check-certificate https://yegor256.github.io/bibcop/bibcop.pl \
+ARG BIBCOP_VERSION=0.0.33
+RUN wget --quiet --no-check-certificate "https://raw.githubusercontent.com/yegor256/bibcop/${BIBCOP_VERSION}/bibcop.pl" \
   && mv bibcop.pl /usr/bin \
   && chmod a+x /usr/bin/bibcop.pl
 
