@@ -20,6 +20,6 @@ jobs:
             year={2024}
           }
           EOT
-      - uses: ./
-        with:
-          opts: --verbose
+      - run: |
+          docker build --tag bibcop-action:test .
+          docker run --rm --env INPUT_OPTS=--verbose --volume "${PWD}:/w" bibcop-action:test

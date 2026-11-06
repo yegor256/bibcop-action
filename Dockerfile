@@ -12,7 +12,7 @@ RUN apt-get -y update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-ARG BIBCOP_VERSION=0.0.33
+ARG BIBCOP_VERSION=0.0.37
 RUN wget --quiet --no-check-certificate "https://raw.githubusercontent.com/yegor256/bibcop/${BIBCOP_VERSION}/bibcop.pl" \
   && mv bibcop.pl /usr/bin \
   && chmod a+x /usr/bin/bibcop.pl
