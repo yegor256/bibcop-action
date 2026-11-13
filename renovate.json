@@ -2,7 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "automerge": true,
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
-  "platformAutomerge": false
+  "platformAutomerge": false,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^Dockerfile$/"
+      ],
+      "matchStrings": [
+        "ARG BIBCOP_VERSION=(?<currentValue>[^\\s]+)"
+      ],
+      "depNameTemplate": "yegor256/bibcop",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
 }
