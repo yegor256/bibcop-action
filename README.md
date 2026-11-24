@@ -18,7 +18,7 @@ jobs:
   bibcop:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v7.0.1
       - uses: yegor256/bibcop-action@0.1.0
 ```
 
